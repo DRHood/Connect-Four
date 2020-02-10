@@ -25,3 +25,12 @@ function pickMove() {
 function start() {
     pickMove();
 }
+
+
+
+
+// setting falling animation for piece
+setTimeout(() => {
+    document.getElementById('foo').classList.add('fall');
+  }, 1000);
+  
