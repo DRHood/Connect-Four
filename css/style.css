@@ -9,3 +9,13 @@ body {
     background-image: url("../images/galaxy_background.svg");
     background-size: cover;
 }
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 525px 1fr;
+    grid-template-rows: 1fr 450px;
+}
+
+#board {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
