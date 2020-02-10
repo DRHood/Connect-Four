@@ -9,13 +9,35 @@ body {
     background-image: url("../images/galaxy_background.svg");
     background-size: cover;
 }
+
+div {
+    padding: 0;
+    margin: 0;
+}
+
 .main-grid {
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 525px 1fr;
-    grid-template-rows: 1fr 450px;
+    grid-template-rows: 1fr 1fr 450px;
+}
+
+.s-btn {
+    grid-column: 2;
+    grid-row: 1;
+    width: 160px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 15%;
 }
 
 #board {
+    grid-column: 2;
+    grid-row: 3;
+    background-image: url("../images/game_board.svg");
+    background-size: cover;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
 }
