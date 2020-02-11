@@ -123,3 +123,17 @@ function checkForWin() {
         }
     }
 }
+
+/* endGame will end the game - any additional functions or things you want to happen when the game is over can go here */
+function endGame(winningPlayer) {
+    gameActive = false; //set the "gameActive" to false, so that it can be started again.
+    document.getElementById('game_info').innerHTML = "Winner: " + winningPlayer; //set the "game_info" to the winner and the winning player #
+}
+
+/* setUpTurn display active player */
+function setUpTurn() {
+    if (gameActive) {
+        //display current player, create <span> with class of player# & color
+        document.getElementById('game_info').innerHTML = "Current Player: Player " + activePlayer + " <span class='player" + activePlayer + "'>(" + playerColor[activePlayer] + ")</span>";
+    }
+}
