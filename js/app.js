@@ -28,4 +28,19 @@ function start() {
             gameBoard[row][col] = 0;
         }	
     }		      
-   
+    setBoard(); // call function to draw board				
+    activePlayer = 1; //set the first player turn
+    setUpTurn(); //ready player turn
+    pickDrop();
+}
+        
+/* setBoard draw board - update each item to appropriate value */
+function setBoard() {
+    checkForWin(); //check if player has won
+    for (col = 0; col <= 6; col++) {
+        for (row = 0; row <= 5; row++) {
+            //set inner HTML of cell (a td) to span with class of 'cell' and 'player' + value of that gameBoard cell
+            document.getElementById('cell_' + row + '_' + col).innerHTML = "<span class='cell player" + gameBoard[row][col] + "'> </span>";
+        }	
+    }
+}

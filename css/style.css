@@ -56,3 +56,18 @@ div {
     width: 75px;
     height: 75px;
 }
+
+/* Player 0 (no player) will be transparent */
+.player0 {
+    background-color: transparent;
+}
+
+/* player 1 red gamecell image */
+.player1 {
+    background-image: url("../images/red_game_piece.svg");
+}
+
+/* player 2 yellow gamecell image */
+.player2 {
+    background-image: url("../images/yellow_game_piece.svg.svg");	
+}
