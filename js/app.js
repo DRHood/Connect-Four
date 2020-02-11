@@ -44,3 +44,13 @@ function setBoard() {
         }	
     }
 }
+
+function pickDrop() {
+    for (let i = 0; i < boardCells.length; i++) {
+        let bCell = boardCells[i];
+        bCell.addEventListener('click', (e)=>{
+            e.preventDefault();
+            console.log(e.target.getAttribute('data-column'));        
+          });
+    }
+}
