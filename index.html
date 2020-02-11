@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connect Four</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/app.js"></script>
 </head>
@@ -12,69 +12,70 @@
     <!-- main layout grid -->
     <div class="main-grid">
         <button type="button" id="s-btn" class="s-btn">New Game</button>
-        <!-- game board w/ grid -->
-        <div id="board">
+        <div id="game_info" class="c-top"></div>
+        <div id="game_status" class="c-top"></div>
+        <!-- game board w/ grid -->    
+        <div id="board">>
             <!-- row 1 -->
             <div class="row">
-                <div id="1A" class="cell"></div>
-                <div id="2A" class="cell"></div>
-                <div id="3A" class="cell"></div>
-                <div id="4A" class="cell"></div>
-                <div id="5A" class="cell"></div>
-                <div id="6A" class="cell"></div>
-                <div id="7A" class="cell"></div>
-            </div>      
+                <div id="cell_0_0" class="cell"></div>
+                <div id="cell_0_1" class="cell"></div>
+                <div id="cell_0_2" class="cell"></div>
+                <div id="cell_0_3" class="cell"></div>
+                <div id="cell_0_4" class="cell"></div>
+                <div id="cell_0_5" class="cell"></div>
+                <div id="cell_0_6" class="cell"></div>                  
+            </div>
             <!-- row 2 -->
             <div class="row">
-                <div id="1B" class="cell"></div>
-                <div id="2B" class="cell"></div>
-                <div id="3B" class="cell"></div>
-                <div id="4B" class="cell"></div>
-                <div id="5B" class="cell"></div>
-                <div id="6B" class="cell"></div>
-                <div id="7B" class="cell"></div>
+                <div id="cell_1_0" class="cell"></div>
+                <div id="cell_1_1" class="cell"></div>
+                <div id="cell_1_2" class="cell"></div>
+                <div id="cell_1_3" class="cell"></div>
+                <div id="cell_1_4" class="cell"></div>
+                <div id="cell_1_5" class="cell"></div>
+                <div id="cell_1_6" class="cell"></div>
             </div>
             <!-- row 3 -->
             <div class="row">
-                <div id="1C" class="cell"></div>
-                <div id="2C" class="cell"></div>
-                <div id="3C" class="cell"></div>
-                <div id="4C" class="cell"></div>
-                <div id="5C" class="cell"></div>
-                <div id="6C" class="cell"></div>
-                <div id="7C" class="cell"></div>
+                <div id="cell_2_0" class="cell"></div>
+                <div id="cell_2_1" class="cell"></div>
+                <div id="cell_2_2" class="cell"></div>
+                <div id="cell_2_3" class="cell"></div>
+                <div id="cell_2_4" class="cell"></div>
+                <div id="cell_2_5" class="cell"></div>
+                <div id="cell_2_6" class="cell"></div>
             </div>
             <!-- row 4 -->
             <div class="row">
-                <div id="1D" class="cell"></div>
-                <div id="2D" class="cell"></div>
-                <div id="3D" class="cell"></div>
-                <div id="4D" class="cell"></div>
-                <div id="5D" class="cell"></div>
-                <div id="6D" class="cell"></div>
-                <div id="7D" class="cell"></div>
+                <div id="cell_3_0" class="cell"></div>
+                <div id="cell_3_1" class="cell"></div>
+                <div id="cell_3_2" class="cell"></div>
+                <div id="cell_3_3" class="cell"></div>
+                <div id="cell_3_4" class="cell"></div>
+                <div id="cell_3_5" class="cell"></div>
+                <div id="cell_3_6" class="cell"></div>
             </div>    
             <!-- row 5 -->
             <div class="row">
-                <div id="1E" class="cell"></div>
-                <div id="2E" class="cell"></div>
-                <div id="3E" class="cell"></div>
-                <div id="4E" class="cell"></div>
-                <div id="5E" class="cell"></div>
-                <div id="6E" class="cell"></div>
-                <div id="7E" class="cell"></div>
-            </div>
+                <div id="cell_4_0" class="cell"></div>
+                <div id="cell_4_1" class="cell"></div>
+                <div id="cell_4_2" class="cell"></div>
+                <div id="cell_4_3" class="cell"></div>
+                <div id="cell_4_4" class="cell"></div>
+                <div id="cell_4_5" class="cell"></div>
+                <div id="cell_4_6" class="cell"></div>
+            </div> 
             <!-- row 6 -->
             <div class='row'>
-                <div id="1F" class="cell"></div>
-                <div id="2F" class="cell"></div>
-                <div id="3F" class="cell"></div>
-                <div id="4F" class="cell"></div>
-                <div id="5F" class="cell"></div>
-                <div id="6F" class="cell"></div>
-                <div id="7F" class="cell"></div>
+                <div id="cell_5_0" class="cell"></div>
+                <div id="cell_5_1" class="cell"></div>
+                <div id="cell_5_2" class="cell"></div>
+                <div id="cell_5_3" class="cell"></div>
+                <div id="cell_5_4" class="cell"></div>
+                <div id="cell_5_5" class="cell"></div>
+                <div id="cell_5_6" class="cell"></div>
             </div>
-            
         </div>
     </div>
 </body>

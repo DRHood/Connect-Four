@@ -31,6 +31,11 @@ div {
     margin: 0 auto;
     border-radius: 25px;
 }
+.c-top {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 auto;
+}
 
 #board {
     grid-column: 2;
@@ -42,22 +47,22 @@ div {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .cell {
- width: 75px;
- height: 75px;
+    width: 75px;
+    height: 75px;
 }
 
 
-/* animation for falling piece */
+/* animation for falling piece
 .fall {
     animation-name: fall-animation;
     animation-duration: 500ms;
-  }
+}
   
-  @keyframes fall-animation {
+@keyframes fall-animation {
     from {
       transform: translateY(-200px);
     }
     to {
       transform: translateY(0);
     }
-  }
+} */
