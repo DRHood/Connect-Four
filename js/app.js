@@ -1,3 +1,10 @@
+// for fullscreen w/ no scroll
+function autoResizeDiv() {
+        document.getElementById('fsm').style.height = window.innerHeight +'px';
+    }
+window.onresize = autoResizeDiv;
+autoResizeDiv();
+
 /* global variables to use in functions */
 const startB = document.querySelector('#s-btn'); //start button
 const boardCells = document.querySelectorAll('.cell')
@@ -37,12 +44,12 @@ function start() {
 /* setBoard draw board - update each item to appropriate value */
 function setBoard() {
     checkForWin(); //check if player has won
-    for (col = 0; col <= 6; col++) {
-        for (row = 0; row <= 5; row++) {
-            //set inner HTML of cell (a td) to span with class of 'cell' and 'player' + value of that gameBoard cell
-            document.getElementById('cell_' + row + '_' + col).innerHTML = "<span class='cell player" + gameBoard[row][col] + "'> </span>";
-        }	
-    }
+    // for (col = 0; col <= 6; col++) {
+    //     for (row = 0; row <= 5; row++) {
+    //         //set inner HTML of cell (a td) to span with class of 'cell' and 'player' + value of that gameBoard cell
+    //         document.getElementById('cell_' + row + '_' + col).innerHTML = "<span class='cell player" + gameBoard[row][col] + "'> </span>";
+    //     }	
+    // }
 }
 
 function pickDrop() {
@@ -153,3 +160,8 @@ function drop(col) {
         }
     }
 }
+
+// // set falling animation for gamePiece
+// setTimeout(() => {
+//     document.getElementById('foo').classList.add('fall');
+//   }, 1000);
