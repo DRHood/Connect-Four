@@ -54,3 +54,72 @@ function pickDrop() {
           });
     }
 }
+
+function checkForWin() { 
+    // function will check each winning situation for each player
+    //check left-to-right
+    //check for player 1 and 2
+    for (i = 1; i <= 2; i++) {
+        //winning row must be 4 long, only check first 3 rows
+        for (col = 0; col <= 3; col++) {
+            for (row = 0; row <= 5; row++) {
+                //check if gameBoard is set to player being checked, if so, check the next 3
+                if (gameBoard[row][col] == i) {
+                    if ((gameBoard[row][col + 1] == i) && (gameBoard[row][col + 2] == i) && (gameBoard[row][col + 3] == i)) {
+                        endGame(i);//match made, run EndGame for player with win
+                        return true; //stop checking, game over
+                    }
+                }
+            }
+        }
+    }
+            
+    //check top-to-bottom
+    for (i = 1; i <= 2; i++) {
+        //winning row must 4 long, only check first 3 rows
+        for (col = 0; col <= 6; col++) {
+            for (row = 0; row <= 2; row++) {
+                //check if gameBoard item is set to player being checked, if so, check next 3
+                if (gameBoard[row][col] == i) {
+                    if ((gameBoard[row + 1][col] == i) && (gameBoard[row + 2][col] == i) && (gameBoard[row + 3][col] == i)) {
+                        endGame(i); //match made, run endGame for player with match
+                        return true; //stop checking, game over
+                    }
+                }
+            }
+        }
+    }
+     //check diagnol down
+     for (i = 1; i <= 2; i++) {
+        //winning row must be 4 long, only check the first 3 rows
+        for (col = 0; col <= 3; col++) {
+            //also only check the bottom most columns, win must be upwards
+            for (row = 0; row <= 2; row++) {
+                //check if gameBoard item is set to player being checked, if so, check next 3
+                if (gameBoard[row][col] == i) {
+                    if ((gameBoard[row + 1][col + 1] == i) && (gameBoard[row + 2][col + 2] == i) && (gameBoard[row + 3][col + 3] == i)) {
+                        endGame(i);
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+                            
+    //check diagnol up
+    for (i = 1; i <= 2; i++) {
+        //winning row must be 4 long, only check the first 3 rows,
+        for (col = 0; col <= 3; col++) {
+            //only check the bottom most columns, win must be upwards
+            for (row = 3; row <= 5; row++) {
+                //check if gameBoard is set to player being checked, if so, check next 3
+                if (gameBoard[row][col] == i) {
+                    if ((gameBoard[row - 1][col + 1] == i) && (gameBoard[row - 2][col + 2] == i) && (gameBoard[row - 3][col + 3] == i)) {
+                        endGame(i);
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+}
