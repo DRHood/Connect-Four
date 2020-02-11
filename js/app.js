@@ -137,3 +137,19 @@ function setUpTurn() {
         document.getElementById('game_info').innerHTML = "Current Player: Player " + activePlayer + " <span class='player" + activePlayer + "'>(" + playerColor[activePlayer] + ")</span>";
     }
 }
+
+function drop(col) {
+    for (row = 5; row >= 0; row--) {
+        if (gameBoard[row][col] == 0) {
+            //set empty row to active player
+            gameBoard[row][col] = activePlayer;
+            //change the active players turn:
+            activePlayer = (activePlayer == 1) ? 2 : 1;
+                    
+            setUpTurn(); //display active player
+
+            //stop looking for empty spaces
+            return true;
+        }
+    }
+}
